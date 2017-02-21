@@ -39,4 +39,16 @@ $(document).ready(function() {
 
   $('.slides a').smoothScroll();
 
+  $('#more').click(function() {
+    $('#sidenavwrap').animate({
+      width: 'toggle'
+    });
+  });
+
+  $(window).resize(function() {
+    if($(window).width() > 768) {
+      $('#sidenavwrap').hide();
+    }
+  });
+
 });

@@ -9,87 +9,148 @@
 			<meta name="author" content="Joshua Isaiah Rodriguez">
 			<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 			<link rel="stylesheet" href="lambdastyle.css" type="text/css">
-			<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400|Open+Sans:300,400" rel="stylesheet">
 		</head>
 		<body>
-			<nav id="navbar">
-				<div id="navigation">
-					<div id="brandwrap">
-						<img id="brand" src="gtlogo.png" />
+			<div id="superwrap">
+				<nav id="navbar">
+					<div id="navigation" class="nav-down">
+						<div id="brandwrap">
+							<img id="brand" src="gtlogo.png" />
+						</div>
+						<ul id="topnav">
+							<li><a class="links navactive" href="#home">Home</a></li>
+							<li><a class="links" href="#about">About</a></li>
+							<li><a class="links" href="#saluting">Saluting</a></li>
+							<li><a class="links" href="#lineage">Lineage</a></li>
+							<li><a class="links" href="#interested">Interested?</a></li>
+							<li id="more"><a href="javascript:;">&#9776;</a></li>
+						</ul>
 					</div>
-					<ul id="topnav">
-						<li><a class="navactive" href="#home">Home</a></li>
-						<li><a href="#welcome">About</a></li>
-						<li><a href="#tangerine">Tangerine Lounge</a></li>
-						<li><a href="#menu">Menu</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li id="more"><a href="javascript:;">&#9776;</a></li>
+				</nav>
+				<div id="sidenavwrap">
+					<ul id="sidenav">
+						<li><a class="navactive" href="javascript:;">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#saluting">Saluting</a></li>
+						<li><a href="#lineage">Lineage</a></li>
+						<li><a href="#interested">Interested?</a></li>
 					</ul>
-				</div>
-			</nav>
-			<div id="slideshow">
-				<div class="slides fade">
-    				<div class="numbertext">1 / 3</div>
-    				<img class="carouselpic"src="newspics/ricky.jpg" />
-    				<a href="#spanishbook">
-    					<div class="text">
-    					<p>WE DID IT<br>
-    						Thanks to all of those who donated Spanish books to those in need!</p>
-    					</div>
-    				</a>
-  				</div>
-  				<div class="slides fade">
-    				<div class="numbertext">2 / 3</div>
-    				<img class="carouselpic" src="newspics/love.jpg" />
-    				<a href="#immigrants" >
-    					<div class="text">
-    						<p>STAND TOGETHER<br>
-    						Sending immigrants letters of solidarity will help our fellow Latinos through tough times</p>
-    					</div>
-    				</a>
-  				</div>
-  				<div class="slides fade">
-    				<div class="numbertext">3 / 3</div>
-    				<img class="carouselpic" src="newspics/bustamante.jpg" />
-    				<a href="#boost" >
-    					<div class="text">
-    						<p>BROTHER HIGHLIGHT<br>
-    						Carlos Bustamante doing big things in Sports Medicine at Georgia Tech. Find out why he joined Lambda Theta Phi</p>
-    					</div>
-    				</a>
-  				</div>
-  				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
- 			 	<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-			<div id="dots">
-  				<span class="dot" onclick="currentSlide(1)"></span> 
-  				<span class="dot" onclick="currentSlide(2)"></span> 
-  				<span class="dot" onclick="currentSlide(3)"></span> 
-			</div>
-			<div id="mainwrapper">
-				<h1 id="newsheader">Featured News</h1>
-				<div id="spanishbook" class="story">
-					<div class="imgwrap">
-						<img class="storyimg" src="storypics/spanishbookflyer.jpg" />
-					</div>
-					<div class="storytext">
-						<p>We would like to thank all of the support we received during our first Spanish Language Book Drive. Thanks to y'all we were able to collect 115 books!</p>
+					<div id="sidepicwrap">
+						<img src="ltpshield.png" />
 					</div>
 				</div>
-				<div id="immigrants" class="story">
-					<div class="imgwrap">
-						<img class="storyimg" src="storypics/ulices.jpg" />
-					</div>
-					<div class="storytext">
-						<p>By telling our stories, we seek to build knowledge, reflect on and show the broader community the ways we show up for one another, build safety for ourselves and love our communities.</p>
+				<div id="slideshow">
+					<div class="slides fade">
+	    				<div class="numbertext">1 / 3</div>
+	    				<img class="carouselpic"src="newspics/ricky.jpg" />
+	    				<a href="#spanishbook">
+	    					<div class="text">
+	    					<p>WE DID IT<br>
+	    						Thanks to all of those who donated Spanish books to those in need!</p>
+	    					</div>
+	    				</a>
+	  				</div>
+	  				<div class="slides fade">
+	    				<div class="numbertext">2 / 3</div>
+	    				<img class="carouselpic" src="newspics/love.jpg" />
+	    				<a href="#immigrants" >
+	    					<div class="text">
+	    						<p>STAND TOGETHER<br>
+	    						Sending immigrants letters of solidarity will help our fellow Latinos through tough times</p>
+	    					</div>
+	    				</a>
+	  				</div>
+	  				<div class="slides fade">
+	    				<div class="numbertext">3 / 3</div>
+	    				<img class="carouselpic" src="newspics/bustamante.jpg" />
+	    				<a href="#boost" >
+	    					<div class="text">
+	    						<p>BROTHER HIGHLIGHT<br>
+	    						Carlos Bustamante is doing big things in Sports Medicine at Georgia Tech. Find out why he joined Lambda Theta Phi</p>
+	    					</div>
+	    				</a>
+	  				</div>
+	  				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	 			 	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<div id="dots">
+	  				<span class="dot" onclick="currentSlide(1)"></span> 
+	  				<span class="dot" onclick="currentSlide(2)"></span> 
+	  				<span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+				<div id="newsheaderwrap">
+					<h1 id="newsheader">Featured News</h1>
+				</div>
+				<div id="mainwrapper">
+					<!--------------------------------------------------------------------
+						STORIES IN THIS MAIN WRAPPER *****MUST**** BE KEPT IN ROWS OF
+						THREE COLUMNS FOR THIS DESIGN TO WORK. ALL ANYONE HAS TO DO
+						IS COPY AND PASTE .storyrow AND MODIFY THE ELEMENTS INSIDE TO ADD ANOTHER ROW. IF YOU DON'T HAVE THREE STORIES, KEEP OLD ONES. GIVE THE SECOND ROW A UNIQUE ID AND CUSTOMIZE ITS margin-top TO BREAK APART THE ROW IN THE MIDDLE
+					---------------------------------------------------------------------->
+					<div class="storyrow"> 
+						<div id="spanishbook" class="story">
+							<div class="imgwrap">
+								<img class="storyimg" src="storypics/spanishbookflyer.jpg" />
+							</div>
+							<div class="storytext">
+								<p>We would like to thank all of the support we received during our first Spanish Language Book Drive. Thanks to y'all we were able to collect 115 books!</p>
+							</div>
+						</div>
+						<div id="immigrants" class="story">
+							<div class="imgwrap">
+								<img class="storyimg" src="storypics/ulices.jpg" />
+							</div>
+							<div class="storytext">
+								<p>By telling our stories, we seek to build knowledge, reflect on and show the broader community the ways we show up for one another, build safety for ourselves and love our communities.</p>
+							</div>
+						</div>
+						<div id="boost" class="story">
+							<div class="imgwrap">
+								<img class="storyimg" src="storypics/boost.jpg" />
+							</div>
+							<div class="storytext">
+								<p>"As a west coast native, I knew I'd need a family away from home to guide through my out of state. More importantly, since joining Lambda I've been inspired and challenged to excel in all areas including academics, community service, and my career."</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div id="boost" class="story">
-					<div class="imgwrap">
-						<img class="storyimg" src="storypics/boost.jpg" />
+				<div class="footer">
+					<!--<a class="chev" href="#" ><span class="chevron"></span></a>-->
+					<div class="socialwrap">
+						<div class="socialdiv">
+							<div class="sociallink">
+								<a href="mailto:gtlambda.ml2@gmail.com" target="_blank" >
+									<img src="lambdaemail.png" />
+								</a>
+							</div>
+							<div class="socialtext">
+								<p>Send us an e-mail</p>
+							</div>
+						</div>
+						<div class="socialdiv">
+							<div class="sociallink">
+								<a href="https://www.facebook.com/wisconsinlambdas1975" target="_blank" >
+									<img src="lambdafacebook.png" />
+								</a>
+							</div>
+							<div class="socialtext">
+								<p>Like us on Facebook</p>
+							</div>
+						</div>
+						<div class="socialdiv">
+							<div class="sociallink">
+								<a href="https://www.instagram.com/gtlambdas" target="_blank" >
+									<img src="lambdainstagram.png" />
+								</a>
+							</div>
+							<div class="socialtext">
+								<p>Follow us on Instagram</p>
+							</div>
+						</div>
 					</div>
-					<div class="storytext">
-						<p>"As a west coast native, I knew I'd need a family away from home to guide through my out of state. More importantly, since joining Lambda I've been inspired and challenged to excel in all areas including academics, community service, and my career."</p>
+					<div id ="copyright">
+						<p>&#169;2017 Joshua Isaiah Rodriguez</p>
 					</div>
 				</div>
 			</div>

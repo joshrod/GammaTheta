@@ -9,7 +9,6 @@
 
 html {
 	width: 100%;
-	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
@@ -17,11 +16,9 @@ html {
 
 body {
 	width: 100%;
-	height: 100%;
 	margin: 0;
-	padding: 6.5rem 0 0;
+	padding: 0 0 0;
 	font-size: 1.6rem;
-	/*background: #643614;*/
 }
 
 h1, h2, h3 {
@@ -39,17 +36,28 @@ p {
 	font-weight: 300;
 }
 
+#superwrap {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 6.5rem 0 0;
+	position: relative;
+	background-color: white;
+}
+
 /***********************************************************************
 								NAV BAR
 ************************************************************************/
 #navigation {
 	width: 100%;
+	max-width: 1280px;
 	height: 6.5rem;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
 	overflow: hidden;
 	background-color: white;
 }
@@ -71,12 +79,26 @@ p {
 }
 
 #topnav {
-	margin: 0;
+	margin: 0 1rem 0 0;
 	padding: 0;
 	list-style-type: none;
+	float: right;
 }
 
-#topnav li a {
+#topnav .navactive, .links:hover {
+	color: white;
+	background-color: #643614;
+	box-shadow: 1px 1px 5px gray;
+}
+
+.links {
+	height: 6.5rem;
+	margin: 0 -.3rem;
+	padding: 2.5rem 1rem; 
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	float: right;
 	color: #6c431d;
 	text-decoration: none;
 }
@@ -85,17 +107,76 @@ p {
 	display: none;
 }
 
-#more {
-	width: 5rem;
+#more a {
 	height: 6.5rem;
-	margin: 0 auto;
-	padding: 2.2rem 1.7rem;
+	margin: 0;
+	padding: 2rem 0;
+	font-size: 2.4rem;
+	color: #6c431d;
+	text-decoration: none;
 	float: right;
-	font-size: 2.2rem;
 }
 
 /***********************************************************************
-								HOME PAGE
+							SIDE NAVIGATION
+************************************************************************/
+
+#sidenavwrap {
+	width: 25rem;
+	height: 100%;
+	min-height: 44rem;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow-x: hidden;
+	background-color: white;
+	display: none;
+	box-shadow: 2px 2px 5px gray;
+}
+
+#sidenav {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#sidenav li a {
+  	width: 100%;
+  	height: 6.5rem;
+  	padding: 2.3rem 0;
+  	font-family: 'Montserrat', sans-serif;
+  	font-weight: 300;
+  	text-decoration: none;
+  	font-size: 1.8rem; 
+  	text-transform: uppercase;
+  	color: #643614;
+  	display: block;
+  	border-bottom: 1px solid rgba(65, 32, 31, 0.5);
+}
+
+#sidenav li a:hover, #sidenav .navactive {
+	color: white;
+	background-color: #643614;
+}
+
+#sidepicwrap {
+	width: 8rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+		-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+#sidepicwrap img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+/***********************************************************************
+						HOME PAGE - SLIDESHOW
 ************************************************************************/
 #slideshow {
 	max-width: 1280px;
@@ -107,7 +188,7 @@ p {
 
 .slides {
 	width: 100%;
-	height: 30rem;
+	height: 32rem;
 	text-align: center;
 }
 
@@ -198,29 +279,37 @@ p {
   to {opacity: 1}
 }
 
+/***********************************************************************
+						HOME PAGE - STORIES
+************************************************************************/
+
+#newsheaderwrap {
+	margin: 1rem 2rem 0;
+}
+
+#newsheader {
+	font-size: 3rem;
+}
+
 #mainwrapper {
 	width: 90%;
 	max-width: 1280px;
 	height: auto;
 	margin: 2rem auto;
+	padding: 0;
 }
-
-#newsheader {
-	margin: 1rem 0 0;
+.storyrow {
+	width: 100%;
+}
+.story {
+	width: 100%;
+	margin: 3rem auto;
+	border: 1px solid #ddd;
 }
 
 .imgwrap {
 	height: 25rem;
 	overflow: hidden;
-}
-
-.story {
-	margin: 3rem auto;
-	border: 1px solid #ddd;
-	/*padding: 1rem;
-	border: 1px solid #ececec;
-	border-radius: 5px;
-	box-shadow: 2px 2px 2px 2px gray;*/
 }
 
 .storyimg {
@@ -237,11 +326,184 @@ p {
 	font-size: 1.4rem;
 }
 
+/***********************************************************************
+								FOOTER
+************************************************************************/
 
+.footer {
+	width: 100%;
+	max-width: 1280px;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(81, 45, 30, 1.0);
+}
+
+.socialwrap {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.socialdiv {
+	width: 70%;
+	margin: 2rem auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+	display: flex;
+	align-items: center;
+
+}
+
+.sociallink {
+	width: 6rem;
+	height: 6rem;
+}
+
+.sociallink img {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+}
+
+.socialtext {
+	display: inline-block;
+}
+
+.socialtext p {
+	margin-left: 2rem;
+	color: white;
+}
+
+#copyright > p {
+	text-align: center;
+	color: white;
+}
 
 /***********************************************************************
 								MEDIA QUERIES
 ************************************************************************/
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 400px) {
+	.imgwrap {
+		height: 30rem;
+	}
+
+	.socialdiv {
+		width: 55%;
+	}
 
 }
+
+@media only screen and (min-width: 480px) {
+	.slides {
+		height: 40rem;
+	}
+
+	.imgwrap {
+		height: 35rem;
+	}
+
+	.socialdiv {
+		width: 55%;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+	#newsheaderwrap {
+		margin-left: 4.5rem;
+	}
+
+	.storyrow {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+		display: flex;
+	}
+
+	.text {
+		font-size: 1.6rem;
+	}
+
+	.story {
+		width: 33.3%;
+		margin: 0 1rem;
+		padding: 0;
+		display: inline-block;
+	}
+
+	.imgwrap {
+		width: 100%;
+		height: auto;
+		max-height: 15rem;
+	}
+
+	.socialwrap {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+		display: flex;
+	}
+
+	.socialdiv {
+		width: 33.3%;
+		margin: 2rem 0;
+		display: block;
+		text-align: center;
+	}
+
+	.sociallink {
+		margin: auto;
+	}
+
+	.socialtext p {
+		margin: 1rem 0 0;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#topnav li:not(:last-child) {
+		display: inline-block;
+	}
+
+	#more {
+		display: none;
+	}
+
+	.slides {
+		height: 45rem;
+	}
+
+	.imgwrap {
+		max-height: 20rem;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.slides {
+		height: 48rem;
+	}
+
+	.imgwrap {
+		max-height: 25rem;
+	}
+}
+
+@media only screen and (min-width:1280px) {
+
+	body {
+		background-color: #643614;
+	}
+
+	#navigation {
+		left: 50%;
+			-webkit-transform: translateX(-50%);
+			transform: translateX(-50%);
+	}
+}
+
+@media only screen and (min-height: 1166px) {body {background-color: rgba(81, 45, 30, 1);}}
