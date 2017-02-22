@@ -1,9 +1,34 @@
+$(document).ready(function() {
 
+  $('.slides a').smoothScroll();
+
+  $('#more').click(function() {
+    $('#sidenavwrap').animate({
+      width: 'toggle'
+    }, 250);
+
+  });
+
+  $(window).resize(function() {
+    if($(window).width() >= 768) {
+      $('#sidenavwrap').hide();
+    }
+  });
+
+  $(function() {
     var slideNumber = 1;
 
     showSlides(slideNumber);
 
     setInterval(automatic, 10000);
+
+    $('.prev').click(function() {
+      plusSlides(-1);
+    });
+
+    $('.next').click(function() {
+      plusSlides(1);
+    });
 
     function automatic() {
       slideNumber++;
@@ -34,21 +59,8 @@
       dots[slideNumber-1].className += " active";
     }
 
-
-$(document).ready(function() {
-
-  $('.slides a').smoothScroll();
-
-  $('#more').click(function() {
-    $('#sidenavwrap').animate({
-      width: 'toggle'
-    });
   });
 
-  $(window).resize(function() {
-    if($(window).width() > 768) {
-      $('#sidenavwrap').hide();
-    }
-  });
+  $('.fancybox').fancybox();
 
 });
