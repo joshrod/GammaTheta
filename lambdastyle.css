@@ -741,7 +741,7 @@ button {
 	}
 
 	#formwrapper {
-		width: 85%;
+		width: 100%;
 		margin: 0 auto;
 	}
 }
@@ -816,7 +816,7 @@ button {
 	}
 
 	#formwrapper {
-		width: 70%;
+		width: 85%;
 	}
 }
 
