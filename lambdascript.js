@@ -41,7 +41,7 @@ $(function() {
 
 $(document).ready(function() {
 
-  $('.slides a').smoothScroll();
+  $('.gridbox a').smoothScroll();
 
   $('#more').click(function() {
     $('#sidenavwrap').animate({
