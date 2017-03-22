@@ -9,6 +9,7 @@
 
 html {
 	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
@@ -16,6 +17,7 @@ html {
 
 body {
 	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0 0 0;
 	font-size: 1.6rem;
@@ -31,7 +33,7 @@ h1, h2, h3, h4 {
 h1, h2, h3, h4, p {
 	margin: 0;
 	padding: 0;
-	color: #643614;
+	color: #6c431d;
 }
 
 p {
@@ -43,6 +45,7 @@ p {
 #superwrap {
 	width: 100%;
 	max-width: 1280px;
+	min-height: 100%;
 	margin: 0 auto;
 	padding: 5.5rem 0 0;
 	position: relative;
@@ -156,14 +159,14 @@ p {
   	text-decoration: none;
   	font-size: 1.8rem; 
   	text-transform: uppercase;
-  	color: #643614;
+  	color: #6c431d;
   	display: block;
   	border-bottom: 1px solid rgba(65, 32, 31, 0.5);
 }
 
 #sidenav li a:hover, #sidenav .navactive {
 	color: white;
-	background-color: #643614;
+	background-color: #6c431d;
 	-webkit-transition: .25s ease;
 	transition: .25s ease;
 }
@@ -524,14 +527,12 @@ p {
 #chapterwrap {
 	width: 100%;
 	margin: 0;
-	max-height: 45rem;
 	text-align: center;
 }
 
 #chapterwrap img {
 	width: 100%;
 	height: auto;
-	max-height: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -634,6 +635,7 @@ p {
 #legacywrap {
 	margin: 2rem auto;
 	text-align: center;
+	clear: both;
 }
 
 /***********************************************************************
@@ -707,34 +709,31 @@ button {
 .footer {
 	width: 100%;
 	max-width: 1280px;
+	height: 11.5rem;
 	margin: 0;
 	padding: 0;
-	background-color: rgba(81, 45, 30, 1.0);
+	background-color: white;
+	position: relative;
+	bottom: 0;
 }
 
 .socialwrap {
-	width: 100%;
-	margin: 0;
+	margin: 1rem auto;
 	padding: 0;
 	overflow: hidden;
-}
-
-.socialdiv {
-	width: 70%;
-	margin: 2rem auto;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-	display: flex;
-	align-items: center;
-
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 }
 
 .sociallink {
-	width: 5rem;
-	height: 5rem;
+	width: 4.5rem;
+	height: 4.5rem;
 	opacity: 0.8;
+	display: inline-block;
+	text-align: center;
 }
 
 .sociallink:hover {
@@ -753,12 +752,20 @@ button {
 
 .socialtext p {
 	margin-left: 2rem;
-	color: white;
+	color: #6c431d;
 }
 
 #copyright > p {
 	text-align: center;
-	color: white;
+	color: #6c431d;
+}
+
+#developer {
+	font-size: 1rem;
+}
+
+#developer a {
+	color: #6c431d;
 }
 
 /***********************************************************************
@@ -866,18 +873,9 @@ button {
 		max-height: 15rem;
 	}
 
-	.socialwrap {
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-		display: flex;
-	}
-
 	.socialdiv {
-		width: 33.3%;
 		margin: 2rem 0;
-		display: block;
+		display: inline-block;
 		text-align: center;
 	}
 
@@ -889,10 +887,10 @@ button {
 		margin: 1rem 0 0;
 	}
 
-	#chapterwrap img {
+	/*#chapterwrap img {
 		width: auto;
 		height: 45rem;
-	}
+	}*/
 
 	#abouttext p {
 		font-size: 1.6rem;
@@ -943,12 +941,8 @@ button {
 		max-height: 20rem;
 	}
 
-	#remove {
-		display: none;
-	}
-
-	.salutingpic {
-		width: 33.3%;
+	#salutingtext p {
+		font-size: 1.6rem;
 	}
 
 	.linethumb {
@@ -957,6 +951,10 @@ button {
 		width: 50%;
 		height: 35rem;
 		float: left;
+	}
+
+	#nuline {
+		height: 40rem;
 	}
 
 	.linetext p {
@@ -975,10 +973,44 @@ button {
 		width: 100%;
 		margin: 0 auto;
 	}
+
+	input {
+		height: 4.5rem;
+		font-size: 2rem;
+	}
+
+	textarea {
+		height: 22rem;
+		font-size: 2rem;
+	}
+
+	button {
+		height: 4rem;
+		font-size: 1.6rem;
+	}
 }
 
-@media only screen and (min-width: 800px) {.linethumb {height:38rem;}}
-@media only screen and (min-width: 900px) {#fifthnews {margin-left: 1.7rem;}.linethumb {height:40rem;}}
+@media only screen and (min-width: 800px) {
+	.linethumb {
+		height: 38rem;
+	}
+
+	#nuline {
+		height: 45rem;
+	}
+}
+@media only screen and (min-width: 900px) {
+	#fifthnews {
+		margin-left: 1.7rem;
+	}
+	.linethumb {
+		height: 40rem;
+	}
+
+	#nuline {
+		height: 47rem;
+	}
+}
 
 @media only screen and (min-width: 960px) {
 	#gridwrap {
@@ -1050,8 +1082,13 @@ button {
 		max-height: 25rem;
 	}
 
+	#chapterwrap {
+		height: 100%;
+	}
+
 	#chapterwrap img {
-		max-height: 48rem;
+		width: 100%;
+		margin: -18% 0 0 0;
 	}
 
 	.storytext p {
@@ -1059,27 +1096,47 @@ button {
 	}
 
 	#aboutheaderwrap {
-		width: 85%;
+		width: 80%;
+		margin: -14rem auto 0;
+		padding: 1rem 1.5rem;
+		background-color: white;
+		position: relative;
 	}
 
 	#abouttext {
-		width: 85%;
-		margin: 0 auto 3rem;	
+		width: 80%;
+		margin: 0rem auto 3rem;
+		padding: 1rem 1.5rem;
+		background-color: white;
+		position: relative;
 	}
 
 	#salutingheaderwrap {
-		width: 85%;
+		width: 90%;
 		margin: 0 auto;
 	}
 
 	#salutingtext {
-		width: 85%;
+		width: 90%;
 		margin: 1rem auto;
+	}
+
+	.salutingpic {
+		width: 33.3%;
+	}
+
+
+	#remove {
+		display: none;
 	}
 
 	.linethumb {
 		width: 33.3%;
 		height: 33rem;
+	}
+
+	#nuline {
+		height: 38rem;
 	}
 
 	#requirements {
@@ -1110,6 +1167,10 @@ button {
 	#formwrapper {
 		width: 85%;
 	}
+
+	textarea {
+		height: 28rem;
+	}
 }
 
 
@@ -1120,6 +1181,10 @@ button {
 
 	.linethumb {
 		height: 37rem;
+	}
+
+	#nuline {
+		height: 43rem;
 	}
 }
 
@@ -1136,4 +1201,23 @@ button {
 	}
 }
 
-@media only screen and (min-height: 1166px) {body {background-color: rgba(81, 45, 30, 1);}}
+@media only screen and (min-width: 768px) and (min-height: 1122px) {
+	body {
+		background-color: white;
+	}
+
+	#salutingpicswrap {
+		overflow: hidden;
+		background-color: white;
+	}
+
+	.salutingpic {
+		width: 50%;
+		padding: 0 .4rem;
+		float: left;
+	}
+
+	#remove {
+		display: block;
+	}
+}
