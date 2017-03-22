@@ -25,7 +25,7 @@ body {
 
 h1, h2, h3, h4 {
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	margin: 0;
 	padding: 0;
 }
@@ -38,7 +38,7 @@ h1, h2, h3, h4, p {
 
 p {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 1.4rem;
 }
 
@@ -953,7 +953,7 @@ button {
 		float: left;
 	}
 
-	#nuline {
+	#nulinepic {
 		height: 40rem;
 	}
 
@@ -995,7 +995,7 @@ button {
 		height: 38rem;
 	}
 
-	#nuline {
+	#nulinepic {
 		height: 45rem;
 	}
 }
@@ -1007,7 +1007,7 @@ button {
 		height: 40rem;
 	}
 
-	#nuline {
+	#nulinepic {
 		height: 47rem;
 	}
 }
@@ -1135,7 +1135,7 @@ button {
 		height: 33rem;
 	}
 
-	#nuline {
+	#nulinepic {
 		height: 38rem;
 	}
 
@@ -1183,7 +1183,7 @@ button {
 		height: 37rem;
 	}
 
-	#nuline {
+	#nulinepic {
 		height: 43rem;
 	}
 }
